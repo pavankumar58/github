@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <script type="text/javascript">
+      function showResult()
+      {
+         x = document.forms["myform"]["newinput"].value;
+         document.forms["myform"]["result"].value=x;
+      }
+       function showpass()
+      {
+         y = document.forms["myform1"]["newpass"].value;
+         document.forms["myform1"]["result1"].value=y;
+      }
+       
+   </script>
+</head>
+   <body>
+
+      <form action="/cgi-bin/html5.cgi" method="get" name="myform">
+         Enter a value : <input type="text" name="newinput" />
+         <input type="button" value="Result"  onclick="showResult();" />
+         <output name="result"></output>
+      </form>
+       
+       <form action="/cgi-bin/html5.cgi" method="get" name="myform1">
+         Enter password : <input type="password" name="newpass" />
+         <input type="button" value="Result"  onclick="showpass();" />
+         <output name="result1"></output>
+      </form>
+       <form action="/cgi-bin/html5.cgi" method="get">
+         Enter email : <input type="text" name="newinput" autofocus/>
+         <p>Try to submit using Submit button</p>
+         <input type="submit" value="submit" background-color="red" />
+      </form>
+		
+   </body>
+	
+</html>
